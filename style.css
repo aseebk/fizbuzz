@@ -1,6 +1,5 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
     margin-top: 50px;
 }
 
@@ -18,7 +17,7 @@ input[type="text"] {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007bff;
+    background-color: #1366be;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -33,4 +32,9 @@ button:hover {
     margin-top: 20px;
     font-size: 18px;
     color: #333;
+}
+li{
+    padding-top: 2rem;
+    color: red;
+    font-size: medium;
 }

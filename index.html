@@ -9,28 +9,32 @@
         <h1>FizzBuzz</h1>
          <input type="text" id="numberInput" placeholder="enter the number">
         <button onclick="fizzbuzz()">Submit</button>
-        <p id="result"></p>
+        <ul id="result"></ul>
     </div>
 
     <script>
          function fizzbuzz() {
-            var number = parseInt(document.getElementById("numberInput").value);
-            var result = "";
+    var number = parseInt(document.getElementById("numberInput").value);
+    var resultList = document.getElementById("result");
+    resultList.innerHTML = ""; 
+    
+    for (var i = 1; i <= number; i++) {
+        var listItem = document.createElement("li");
 
-            for (var i = 1; i <= number; i++) {
-                if (i % 3 === 0 && i % 5 === 0) {
-                    result += "FizzBuzz";
-                } else if (i % 3 === 0) {
-                    result += "Fizz ";
-                } else if (i % 5 === 0) {
-                    result += "Buzz ";
-                } else {
-                    result += i + " ";
-                }
-            }
-
-            document.getElementById("result").textContent = result;
+        if (i % 3 === 0 && i % 5 === 0) {
+            listItem.textContent = "FizzBuzz";
+        } else if (i % 3 === 0) {
+            listItem.textContent = "Fizz";
+        } else if (i % 5 === 0) {
+            listItem.textContent = "Buzz";
+        } else {
+            listItem.textContent = i;
         }
+
+
+        resultList.appendChild(listItem);
+    }
+}
     </script>
 </body>
 </html>
